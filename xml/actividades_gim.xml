@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Actividades>
+
+	<actividad codigo="0001" tipo="libre">
+		<nombre>piscina</nombre>
+		<cuota_adicional>0</cuota_adicional>
+	</actividad>
+	
+	<actividad codigo="0002" tipo="libre">
+		<nombre>Fitness</nombre>
+		<cuota_adicional>0</cuota_adicional>
+	</actividad>
+	
+	<actividad codigo="0003" tipo="grupo">
+		<nombre>Aerobic</nombre>
+		<cuota_adicional>2</cuota_adicional>
+	</actividad>
+	
+	<actividad codigo="0004" tipo="grupo">
+		<nombre>Pilates</nombre>
+		<cuota_adicional>2</cuota_adicional>
+	</actividad>
+	
+	<actividad codigo="0005" tipo="grupo">
+		<nombre>Taichi</nombre>
+		<cuota_adicional>2</cuota_adicional>
+	</actividad>
+	
+	<actividad codigo="0011" tipo="especial">
+		<nombre>Padel</nombre>
+		<cuota_adicional>4</cuota_adicional>
+	</actividad>
+	
+	<actividad codigo="0012" tipo="especial">
+		<nombre>Squash</nombre>
+		<cuota_adicional>4</cuota_adicional>
+	</actividad>
+	
+</Actividades>
