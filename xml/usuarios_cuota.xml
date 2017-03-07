@@ -1,0 +1,147 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<usuarios_cuotas>
+	<datos>
+    <codigo_socio codigo="0001"/>
+    <nombre_socio>Mortadelo</nombre_socio>
+    <codigo_actividad>0004</codigo_actividad>
+    <nombre_actividad>Pilates</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="grupo"/>
+    <cuota_adicional>2</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0001"/>
+    <nombre_socio>Mortadelo</nombre_socio>
+    <codigo_actividad>0004</codigo_actividad>
+    <nombre_actividad>Pilates</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="grupo"/>
+    <cuota_adicional>2</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0002"/>
+    <nombre_socio>Filemon</nombre_socio>
+    <codigo_actividad>0001</codigo_actividad>
+    <nombre_actividad>piscina</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="libre"/>
+    <cuota_adicional>0</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0002"/>
+    <nombre_socio>Filemon</nombre_socio>
+    <codigo_actividad>0002</codigo_actividad>
+    <nombre_actividad>Fitness</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="libre"/>
+    <cuota_adicional>0</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0003"/>
+    <nombre_socio>Ofelia</nombre_socio>
+    <codigo_actividad>0005</codigo_actividad>
+    <nombre_actividad>Taichi</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="grupo"/>
+    <cuota_adicional>2</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0003"/>
+    <nombre_socio>Ofelia</nombre_socio>
+    <codigo_actividad>0003</codigo_actividad>
+    <nombre_actividad>Aerobic</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="grupo"/>
+    <cuota_adicional>2</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0004"/>
+    <nombre_socio>Bacterio</nombre_socio>
+    <codigo_actividad>0002</codigo_actividad>
+    <nombre_actividad>Fitness</nombre_actividad>
+    <duracion>2</duracion>
+    <tipo_actividad tipo="libre"/>
+    <cuota_adicional>0</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0004"/>
+    <nombre_socio>Bacterio</nombre_socio>
+    <codigo_actividad>0002</codigo_actividad>
+    <nombre_actividad>Fitness</nombre_actividad>
+    <duracion>2</duracion>
+    <tipo_actividad tipo="libre"/>
+    <cuota_adicional>0</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0004"/>
+    <nombre_socio>Bacterio</nombre_socio>
+    <codigo_actividad>0011</codigo_actividad>
+    <nombre_actividad>Padel</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="especial"/>
+    <cuota_adicional>4</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0004"/>
+    <nombre_socio>Bacterio</nombre_socio>
+    <codigo_actividad>0011</codigo_actividad>
+    <nombre_actividad>Padel</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="especial"/>
+    <cuota_adicional>4</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0004"/>
+    <nombre_socio>Bacterio</nombre_socio>
+    <codigo_actividad>0011</codigo_actividad>
+    <nombre_actividad>Padel</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="especial"/>
+    <cuota_adicional>4</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0004"/>
+    <nombre_socio>Bacterio</nombre_socio>
+    <codigo_actividad>0004</codigo_actividad>
+    <nombre_actividad>Pilates</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="grupo"/>
+    <cuota_adicional>2</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0005"/>
+    <nombre_socio>Vicente</nombre_socio>
+    <codigo_actividad>0003</codigo_actividad>
+    <nombre_actividad>Aerobic</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="grupo"/>
+    <cuota_adicional>2</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0005"/>
+    <nombre_socio>Vicente</nombre_socio>
+    <codigo_actividad>0002</codigo_actividad>
+    <nombre_actividad>Fitness</nombre_actividad>
+    <duracion>2</duracion>
+    <tipo_actividad tipo="libre"/>
+    <cuota_adicional>0</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0006"/>
+    <nombre_socio>Anacleto</nombre_socio>
+    <codigo_actividad>0012</codigo_actividad>
+    <nombre_actividad>Squash</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="especial"/>
+    <cuota_adicional>4</cuota_adicional>
+</datos>
+	<datos>
+    <codigo_socio codigo="0006"/>
+    <nombre_socio>Anacleto</nombre_socio>
+    <codigo_actividad>0012</codigo_actividad>
+    <nombre_actividad>Squash</nombre_actividad>
+    <duracion>1</duracion>
+    <tipo_actividad tipo="especial"/>
+    <cuota_adicional>4</cuota_adicional>
+</datos>
+</usuarios_cuotas>

@@ -98,10 +98,9 @@ public class Main
             bw.write("<usuarios_cuotas>"+"\n");
 
             while(r.hasMoreResources()){
-                Resource i = r.nextResource();
-                bw.write(i.getContent()+"\n");
-
+                bw.write( r.nextResource().getContent()+"\n");
             }
+
             bw.write("</usuarios_cuotas>"+"\n");
             bw.close();
 
