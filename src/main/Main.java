@@ -2,21 +2,24 @@ package main;
 
 import net.xqj.exist.ExistXQDataSource;
 import org.xmldb.api.DatabaseManager;
-import org.xmldb.api.base.Collection;
-import org.xmldb.api.base.Database;
-import org.xmldb.api.base.Resource;
-import org.xmldb.api.base.XMLDBException;
+import org.xmldb.api.base.*;
+import org.xmldb.api.modules.XPathQueryService;
 
 
+import javax.xml.xquery.XQConnection;
 import javax.xml.xquery.XQDataSource;
+import javax.xml.xquery.XQException;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 
 /**
  * Created by a15carlosspb on 06/03/2017.
  */
 public class Main
 {
-    public static void main(String [] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, XMLDBException {
+    public static void main(String [] args) throws ClassNotFoundException, IllegalAccessException, InstantiationException, XMLDBException, XQException {
         String driver = "org.exist.xmldb.DatabaseImpl";
         Class c = Class.forName(driver);
         Database db = (Database) c.newInstance();
@@ -57,9 +60,54 @@ public class Main
         }
 
         System.out.printf("\nA continuación se obtendrá de cada socio su cuota a pagar");
+        cuotas(col);
+
     }
 
-    public static void cuotas(){
-        XQDataSource server = new ExistXQDataSource();
+    public static void cuotas(Collection col) throws XQException, XMLDBException {
+        /*XQDataSource server = new ExistXQDataSource();
+        server.setProperty("serverName","localhost");
+        server.setProperty("port","8080");
+        XQConnection*/
+
+        XPathQueryService xpqs = (XPathQueryService)col.getService("XPathQueryService", "1.0");
+        xpqs.setProperty("indent", "yes");
+        ResourceSet result = xpqs.query("for $socio in /Socios/socio "+
+                                        "let $cod := $socio/@codigo "+
+                                        "for $uso in /USO_GIMNASIO/fila_uso[CODSOCIO = $cod] "+
+                                        "let $codactividad := $uso/CODACTIV "+
+                                        "for $actividad in /Actividades/actividad[@codigo=$codactividad] "+
+                                        "let $cuota_adicional := $actividad/cuota_adicional "+
+                                        "return <datos> "+
+                                        "           <codigo_socio>{$cod}</codigo_socio> "+
+                                        "           <nombre_socio>{string($socio/nombre)}</nombre_socio> "+
+                                        "           <codigo_actividad>{string($codactividad)}</codigo_actividad> "+
+                                        "           <nombre_actividad>{string($actividad/nombre)}</nombre_actividad> "+
+                                        "           <duracion>{number($uso/HORAFINAL)-number($uso/HORAINICIO)}</duracion> "+
+                                        "           <tipo_actividad>{($actividad/@tipo)}</tipo_actividad> "+
+                                        "           <cuota_adicional>{number($cuota_adicional)}</cuota_adicional> "+
+                                        "       </datos> ");
+        ResourceIterator r = result.getIterator();
+        File fichero = new File("xml/usuarios_cuota.xml");
+        if(fichero.exists()){
+            fichero.delete();
+        }
+        try{
+            BufferedWriter bw = new BufferedWriter(new FileWriter("xml/usuarios_cuota.xml"));
+            bw.write("<?xml version='1.0' encoding='UTF-8'?>" + "\n");
+            bw.write("<usuarios_cuotas>"+"\n");
+
+            while(r.hasMoreResources()){
+                Resource i = r.nextResource();
+                bw.write(i.getContent()+"\n");
+
+            }
+            bw.write("</usuarios_cuotas>"+"\n");
+            bw.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
     }
 }
